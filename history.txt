@@ -1,0 +1,63 @@
+# mravic Marco, DeGrado lab miniprotein design
+
+Take complex of pdl1 and pdr1, and extract 3 bstrands in PDL1 closest to PDR1
+
+From nearest 2 beta strands, cut the middle 5 and 6 residues from the two strands
+Use this as a Master search query. Master executables v1.3 from
+
+Database: v2_162901_bc_30-scPDB
+	single-chain pdb database with 30% sequence ID, rfree< 0.25 and 3.2 A resolution, Xray only
+	contains PDS, and another directory has the original PDB files: ~/v2_162901_bc_30-scPDB_oPDB/
+
+### Section 1: where are the 'low energy' places to dock a helix on this pair of anti-parallel strands ###
+
+>> mkdir 1_locateHelix
+>> cd 1_locateHelix
+
+>> ~/bin/createPDS --type query --pdb pdL1_EE.pdb
+
+>> ~/bin/master --query pdL1_EE.pds --targetList $path2database --bbRMSD --rmsdCut 0.8 --topN 10000 --matchOut pdL1_EE.m --structOut matches/ --seqOut pdL1_EE.s
+
+# result: highest RMSD of the first 10k matches is <0.6 so we can easily increase if more helices
+
+# look in original PDB files from master search, find nearby helices and save to pdb file
+# save only 8 residue fragments... 
+
+>> python ../bin/1_findHelices.py pdL1_EE.m ~/v2_162901_bc_30-scPDB_oPDB/ pdL1_EE.pdb matches/ > 1_locateHelixLOG.txt
+
+# 223 8-residue helices saved to new directory 'locaed_helices_8res'; and full helix found in '*FULL'
+
+##### Section 1 end #####
+
+
+
+##### Section 2 #########
+
+# Cluster the mini-helices! Make sure to save the pairwise RMSD matrix to a pkl
+# then do a hierarchical with a cutoff at 1 A. 
+# then k-medoids of just the main cluster
+
+# ACTUALLY JUST VISUALLY PICKED A TIGHT CLUSTER!! 
+# made 3 other pdb's for other clusters 
+
+
+##### Section 2  END ####
+
+
+#### Section 3  #########
+
+#renumber the res file based on the desired topology
+# then do a quick minimization and repack stage
+# make backbone restraints and fixed AA identity at: 3,10,12,18,19,20,21 (actutally these resnums funny... but just know interface fixed!)
+# Also fix the manually found disulfide: 23-29
+
+> python 3_relax.py ~/rosetta/ pdL1-Mini1_EEEH.pdb  3_relaxTHIN.xml Resfile.txt  3_relax-Mini1_EEEH.cst relax_outputs/
+
+
+#### Section 3 END  #####
+
+
+
+# Now search for each loop...
+# Loop 1:  C-term is chain C resi2-5, N term is chain A resi 12-15
+
