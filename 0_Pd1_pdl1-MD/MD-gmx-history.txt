@@ -12,5 +12,14 @@
 
 > gmx mdrun -v -deffnm em
 
+> gmx grompp -f nvt_c36.mdp -c em.gro -p topol.top -o nvt.tpr
+
+> gmx mdrun -deffnm nvt
+
+> gmx grompp -f npt_c36.mdp -c nvt_c36.gro -t nvt_c36.cpt -p topol.top -o npt_c36.tpr
+
+> gmx mdrun -deffnm npt_c36
+
+> gmx grompp -f md_c36.mdp -c npt_c36.gro -t npt_c36.cpt -p topol.top -o md_0_1.tpr
 
 

@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: mmravic (501)
-;	On host: Marcos-MacBook-Pro.local
-;	At date: Mon Mar 12 10:53:59 2018
+;	On host: HR-HX9QBW1-LT.campus.net.ucsf.edu
+;	At date: Mon Mar 12 13:22:59 2018
 
 ;
 ;	Created by:
@@ -12,21 +12,21 @@
 ;	Data prefix:  /usr/local/gromacs
 ;	Working dir:  /Users/mmravic/pd1_miniDesign/0_Pd1_pdl1-MD
 ;	Command line:
-;	  gmx grompp -f nvt_c36.mdp -c em.gro -p topol.top -o nvt_c36.tpr
+;	  gmx grompp -f md_c36.mdp -c npt_c36.gro -t npt_c36.cpt -p topol.top -o md_0_1.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
 ; e.g.: -I/home/joe/doe -I/home/mary/roe
 include                  = 
 ; e.g.: -DPOSRES -DFLEXIBLE (note these variable names are case sensitive)
-define                   = -DPOSRES
+define                   = 
 
 ; RUN CONTROL PARAMETERS
 integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 50000
+nsteps                   = 500000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -60,20 +60,20 @@ rtpi                     = 0.05
 
 ; OUTPUT CONTROL OPTIONS
 ; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 500
-nstvout                  = 500
+nstxout                  = 10000
+nstvout                  = 10000
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 500
+nstlog                   = 10000
 nstcalcenergy            = 100
-nstenergy                = 500
+nstenergy                = 10000
 ; Output frequency and precision for .xtc file
-nstxout-compressed       = 0
+nstxout-compressed       = 10000
 compressed-x-precision   = 1000
 ; This selects the subset of atoms for the compressed
 ; trajectory file. You can select multiple groups. By
 ; default, all atoms will be written.
-compressed-x-grps        = 
+compressed-x-grps        = System
 ; Selection of energy groups
 energygrps               = 
 
@@ -166,13 +166,13 @@ tc-grps                  = Protein Non-Protein
 tau_t                    = 0.1	  0.1
 ref_t                    = 300 	  300
 ; pressure coupling     
-pcoupl                   = no
-pcoupltype               = Isotropic
+pcoupl                   = Parrinello-Rahman
+pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau-p                    = 1
-compressibility          = 
-ref-p                    = 
+tau_p                    = 2.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord-scaling         = No
 
@@ -215,16 +215,16 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = yes
-gen_temp                 = 300
-gen_seed                 = -1
+gen_vel                  = no
+gen-temp                 = 300
+gen-seed                 = -1
 
 ; OPTIONS FOR BONDS    
 constraints              = all-bonds
 ; Type of constraint algorithm
 constraint_algorithm     = lincs
 ; Do not constrain the start configuration
-continuation             = no
+continuation             = yes
 ; Use successive overrelaxation to reduce the number of shake iterations
 Shake-SOR                = no
 ; Relative tolerance of shake
