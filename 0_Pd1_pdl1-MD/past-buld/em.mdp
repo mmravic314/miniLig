@@ -1,0 +1,19 @@
+
+; em.mdp
+; molecular dynamics parameters for the initial energy minimization,
+; just after adding solvent
+
+integrator    = steep   ; Algorithm (steepest descent minimization)
+emtol        = 1000.0   ; Stop when max force < 1000 kJ/mol/nm
+emstep         = 0.01   ; Energy step size
+nsteps        = 10000   ; Maximum number of minimization steps to perform.
+                         ; In practice, no more than 1000 cycles are used
+                         ; before the emtol force minimum is satisfied.
+cutoff-scheme   = Verlet
+nstlist           = 1   ; Frequency to update neighbor list, long-range forces
+ns_type        = grid   ; Method to determine neighbor list (simple, grid)
+coulombtype     = PME   ; Treatment of long range electrostatic interactions
+rlist           = 1.4   ; Cut-off for neighbor list (short-range forces)
+rcoulomb        = 1.4   ; Short-range electrostatic cut-off (nm)
+rvdw            = 1.4   ; Short-range Van der Waals cut-off (nm)
+pbc             = xyz   ; Periodic Boundary Conditions (in all axes)

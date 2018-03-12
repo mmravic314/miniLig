@@ -1,0 +1,16 @@
+> gmx pdb2gmx -f pd1-pdl1_looped.pdb -o pd1-complex.gro -water tip3p 
+
+> gmx editconf -f pd1-complex.gro  -o pd1-complex_wBox.gro -c -d 1.0 -bt cubic
+
+> gmx solvate -cp pd1-complex_wBox.gro -cs spc216.gro -o pd1-complex-Solv.gro -p topol.top
+
+> gmx grompp -f ions.mdp -c pd1-complex-Solv.gro  -p topol.top  -o ions.tpr
+
+> gmx genion -s ions.tpr -o pd1-complexSolIon.gro -p topol.top -pname NA -nname CL -neutral -conc 0.1
+
+> gmx grompp -f minim.mdp -c pd1-complexSolIon.gro  -p topol.top -o em.tpr
+
+> gmx mdrun -v -deffnm em
+
+
+

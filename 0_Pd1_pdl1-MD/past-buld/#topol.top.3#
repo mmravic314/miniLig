@@ -1,0 +1,51 @@
+;
+;	File 'topol.top' was generated
+;	By user: mmravic (501)
+;	On host: IHA-73ZLL72-LT.campus.net.ucsf.edu
+;	At date: Sun Mar 11 22:44:00 2018
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2016.4 (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /Users/mmravic/pd1_miniDesign/0_Pd1_pdl1-MD
+;	Command line:
+;	  gmx pdb2gmx -f pd1-pdl1_looped.pdb -o pd1-complex.gro -water tip3p
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "charmm36-jul2017.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_B.itp"
+#include "topol_Protein_chain_A.itp"
+
+; Include water topology
+#include "charmm36-jul2017.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "charmm36-jul2017.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_B     1
+Protein_chain_A     1
+SOL         22282
+NA               43
+CL               44

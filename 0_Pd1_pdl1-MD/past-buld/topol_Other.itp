@@ -1,0 +1,34 @@
+;
+;	File 'topol_Other.itp' was generated
+;	By user: mmravic (501)
+;	On host: otp1231606ots.ucsf.edu
+;	At date: Sun Mar 11 20:19:34 2018
+
+;
+;	This is a include topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2016.4 (-:
+;	
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /Users/mmravic/pd1_miniDesign/0_Pd1_pdl1-MD
+;	Command line:
+;	  gmx pdb2gmx -f pd1-pdl1_looped.pdb -o pd1-complex.gro -water tip3p
+;	Force field was read from the standard GROMACS share directory.
+;
+
+[ moleculetype ]
+; Name            nrexcl
+Other               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   0 SOD rtp SOD  q +1.0
+     1        SOD      01   SOD    SOD      1          1    22.9898   ; qtot 1
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre_Other.itp"
+#endif
+
