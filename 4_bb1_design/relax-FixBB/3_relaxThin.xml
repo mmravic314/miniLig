@@ -1,0 +1,61 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+    		<ScoreFunction name="hard_cart" weights="ref2015">
+    		 <Reweight scoretype="coordinate_constraint" weight="2" />
+ 			 <Reweight scoretype="cart_bonded" weight="0.5" />
+ 			 <Reweight scoretype="pro_close" weight="0.0"/>
+ 			</ScoreFunction>
+
+ 			 <ScoreFunction name="soft" weights="soft_rep">
+					<Reweight scoretype="hack_aro" weight="1"/>
+ 			</ScoreFunction>
+
+ 			 <ScoreFunction name="hard" weights="ref2015">
+					<Reweight scoretype="hack_aro" weight="1"/>
+ 			</ScoreFunction>
+
+    </SCOREFXNS>
+
+    <RESIDUE_SELECTORS>
+    	<Layer name="core_select" select_core="1"/>
+    </RESIDUE_SELECTORS>
+
+    <TASKOPERATIONS>
+    	<ReadResfile name="resfile"/>
+        <IncludeCurrent name="current"/>
+        <LimitAromaChi2 name="arochi" />
+        <ExtraRotamersGeneric name="ex1_ex2" ex1="1" ex2="1"/>
+    </TASKOPERATIONS>
+
+     <FILTERS>
+    <PackStat name="packstat" repeats="10" threshold="0.65" confidence="0"/>
+    </FILTERS>
+
+    <FILTERS>
+    </FILTERS>
+    <MOVERS>
+    	<MinMover name="hardmin_bb" scorefxn="hard_cart" chi="0" bb="1" jump="ALL" cartesian="1" type="lbfgs_armijo_nonmonotone" tolerance="0.001" max_iter="1000"/>
+        <MinMover name="hardmin_sc" scorefxn="hard_cart" chi="1" bb="0" jump="ALL" cartesian="1" type="lbfgs_armijo_nonmonotone" tolerance="0.001" max_iter="1000"/>
+    	<ConstraintSetMover name="add_cst" cst_file="%%cst_file%%"/>
+    	<ClearConstraintsMover name="clearconstraints"/>
+
+    	<PackRotamersMover name="softpack" scorefxn="soft" task_operations="resfile,current,arochi,ex1_ex2"/>
+    	<PackRotamersMover name="hardpack" scorefxn="hard" task_operations="resfile,current,arochi,ex1_ex2"/>
+
+    </MOVERS>
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+    <PROTOCOLS>
+    	<Add mover="add_cst"/>
+ 		<Add mover="hardmin_bb"/>
+        <Add mover="clearconstraints"/>
+ 		<Add mover="softpack"/>
+        <Add mover="hardpack"/>
+        <Add mover="hardmin_sc"/>
+        <Add filter="packstat"/>
+
+
+
+    </PROTOCOLS>
+    <OUTPUT />
+</ROSETTASCRIPTS>

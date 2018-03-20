@@ -1,0 +1,4 @@
+SEQUENCE: 
+SCORE: total_score dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd       omega     p_aa_pp    packstat pro_close rama_prepro         ref yhh_planarity description 
+SCORE:    -106.722    -0.209  -171.929    37.320   -70.802        0.339               6.723              16.638             118.906      -7.965     -16.040      -2.879     -15.040      -3.655       0.422     -11.007       0.633     0.000       0.021      12.432         0.003 relax_outputs/looped_EEEH-1_outLocal
+SCORE:    -106.757    -0.205  -171.930    37.319   -70.823        0.339               6.723              16.639             118.876      -7.967     -16.040      -2.878     -15.040      -3.640       0.422     -11.007       0.633     0.000       0.021      12.432         0.002 relax_outputs/looped_EEEH-1_outLocal_0002
