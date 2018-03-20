@@ -19,6 +19,8 @@
 
 # Example command line (Local)
 #  python ~/tertBuilding/CMP_bobo/folding/bin/rosi_refold_local.py ~/rosetta/ ~/tertBuilding/CMP_bobo/folding/21169/model_21169.fasta ~/tertBuilding/CMP_bobo/folding/21169/ ~/tertBuilding/CMP_bobo/folding/21169/21169.psipred_ss2
+# python ../../bin/4_refold_local_FixSS.py ~/rosetta/ r1_fixbb_seq.txt ./ r1_psipred_ss2.txt disulfide.txt 
+
 
 # EXAMPLE QSUB
 # qsub ~/tertBuilding/CMP_bobo/folding/bin/rosi_refold_local.py ~/bin/Rosetta/ ~/tertBuilding/CMP_bobo/folding/21169/model_21169.fasta ~/tertBuilding/CMP_bobo/folding/21169/ ~/tertBuilding/CMP_bobo/folding/21169/21169.psipred_ss2
@@ -36,7 +38,7 @@ rosiSCORE      = os.path.join( sys.argv[1], 'source/bin/score.macosclangrelease'
 
 inFasta 	= sys.argv[2]
 wrkDir 		= sys.argv[3]
-outputs 	= os.path.join( wrkDir, 'outputs_SS' )
+outputs 	= os.path.join( wrkDir, 'outputs_SS/' )
 
 if not os.path.exists( outputs ):
 	os.mkdir( outputs )
@@ -53,10 +55,10 @@ add_nulls = lambda number, zero_count : "{0:0{1}d}".format(number, zero_count)
 try:
 	output_suffix 			= add_nulls( os.environ["SGE_TASK_ID"], 7 ) 
 except KeyError:
-	output_suffix                      = add_nulls( 1, 7 )
+	output_suffix                      = add_nulls( 1, 5 )
 
-outF 	= modelTag + '_%s.pdb' % output_suffix 
-sil_out = os.path.join( outputs, modelTag + '_%s.out' % output_suffix )
+outF 	= modelTag + '%s.pdb' % output_suffix 
+sil_out = os.path.join( outputs, modelTag + '%s.out' % output_suffix )
 pdb_out = os.path.join( outputs, modelTag + '%s.pdb' % output_suffix )
 
 ###
@@ -72,23 +74,25 @@ cmd = [ rosiFOLD,
 '-abinitio::rsd_wt_helix', 	'0.5',
 '-abinitio::rsd_wt_loop', 	'0.5',
 #'-use_filters', 		'true', 
-'-nstruct',			'10',
+'-nstruct',			'1',
 '-relax::fast',
 '-out:overwrite', 
-#'-out:file:silent', 		sil_out,
+'-out:file:silent', 		sil_out,
 '-out:path',                    outputs,
-'-out:pdb',                 #    pdb_out,
+#'-out:pdb',                    pdb_out,
 '-psipred_ss2',			ss2F,
 '-constant_seed',
 '-rebuild_disulf',              'true', 
 '-detect_disulf',               'true', 
-'-in:fix_disulf',               'disulfide.txt' 
+'-in:fix_disulf',               disulfideFile, 
+
 ]
 
 
 print  '\n', cmd, '\n'
 # Run design
-sp.call( cmd )
+
+#sp.call( cmd )
 
 
 print 
@@ -96,15 +100,12 @@ print 'time elapsed (s)', time.time() - start
 print 
 
 
-sys.exit()
-
 
 scCMD = [ rosiSCORE, 
 '-database', rosiDB, 
 '-in:file:silent', sil_out,
-
-'-out:path:pdb', outputs, 
-#'-out:prefix', outputs, 
+#'-out:path:pdb', modelTag + '%s.pdb' % output_suffix, 
+'-out:prefix', outputs, 
 '-out:output'
 
 ]
