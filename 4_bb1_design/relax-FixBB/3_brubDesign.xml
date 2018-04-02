@@ -1,0 +1,86 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+    		<ScoreFunction name="hard_cart" weights="ref2015">
+    		 <Reweight scoretype="coordinate_constraint" weight="2" />
+ 			 <Reweight scoretype="cart_bonded" weight="0.5" />
+ 			 <Reweight scoretype="pro_close" weight="0.0"/>
+ 			</ScoreFunction>
+
+ 			 <ScoreFunction name="soft" weights="soft_rep">
+					<Reweight scoretype="hack_aro" weight="1"/>
+                    <Reweight scoretype="coordinate_constraint" weight="2" />
+                    <Reweight scoretype="rg" weight="2"/>
+ 			</ScoreFunction>
+
+ 			 <ScoreFunction name="hard" weights="ref2015">
+					<Reweight scoretype="hack_aro" weight="1"/>
+                    <Reweight scoretype="coordinate_constraint" weight="2" />
+                    <Reweight scoretype="rg" weight="2"/>
+ 			</ScoreFunction>
+
+    </SCOREFXNS>
+
+    <RESIDUE_SELECTORS>
+    	<Layer name="core_select" select_core="1"/>
+        <Not name="not_core" selector="core_select"/>
+    </RESIDUE_SELECTORS>
+
+    <TASKOPERATIONS>
+    	<ReadResfile name="resfile"/>
+        <IncludeCurrent name="current"/>
+        <LimitAromaChi2 name="arochi" />
+        <ExtraRotamersGeneric name="ex1_ex2" ex1="1" ex2="1"/>
+    </TASKOPERATIONS>
+
+     <FILTERS>
+    <PackStat name="packstat" repeats="5" threshold="0.65" confidence="1"/>
+    </FILTERS>
+
+    <FILTERS>
+    </FILTERS>
+    <MOVERS>
+    	<MinMover name="hardmin_bb" scorefxn="hard_cart" chi="0" bb="1" jump="ALL" cartesian="1" type="lbfgs_armijo_nonmonotone" tolerance="0.00001" max_iter="10000"/>
+        <MinMover name="hardmin_sc" scorefxn="hard_cart" chi="1" bb="0" jump="ALL" cartesian="1" type="lbfgs_armijo_nonmonotone" tolerance="0.00001" max_iter="10000"/>
+    	<ConstraintSetMover name="add_cst" cst_file="%%cst_file%%"/>
+    	<ClearConstraintsMover name="clearconstraints"/>
+
+        <FastRelax name="fr" scorefxn="hard"/>
+
+    	<PackRotamersMover name="softpack" scorefxn="soft" task_operations="resfile,current,arochi,ex1_ex2"/>
+
+    	<PackRotamersMover name="hardpack" scorefxn="hard" task_operations="resfile,current,arochi,ex1_ex2" />
+
+
+        <ParsedProtocol name="softNrelax">
+            <Add mover_name="softpack"/>
+            <Add mover_name="fr"/>
+        </ParsedProtocol>
+
+        <ParsedProtocol name="hardNrelax">
+            <Add mover_name="hardpack"/>
+            <Add mover_name="fr"/>
+        </ParsedProtocol>
+
+        <GenericMonteCarlo name="soft_flexBB" mover_name="softNrelax" trials="1" preapply="0" temperature ="0.3" sample_type="high" saved_accept_file_name="last_accepted.pdb" recover_low="1" filter_name="packstat"/>
+
+        <GenericMonteCarlo name="hard_flexBB" mover_name="hardNrelax" trials="1" preapply="0" temperature ="1" sample_type="low" saved_accept_file_name="last_accepted.pdb" recover_low="1" scorefxn_name="hard"/>
+
+
+        <GenericMonteCarlo name="hard_flexBB-pack" mover_name="hardNrelax" trials="1" preapply="0" temperature =".4" sample_type="high" saved_accept_file_name="last_accepted.pdb" recover_low="1" filter_name="packstat"/>
+
+    </MOVERS>
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+    <PROTOCOLS>
+    	<Add mover="add_cst"/>
+ 		<Add mover="hardmin_bb"/>
+        <Add mover="soft_flexBB"/>
+         <Add mover="hard_flexBB"/>
+        <Add mover="fr"/>
+        <Add filter="packstat"/>
+
+
+
+    </PROTOCOLS>
+    <OUTPUT />
+</ROSETTASCRIPTS>

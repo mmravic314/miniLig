@@ -19,6 +19,8 @@
 
 # Example command line (Local)
 #  python ~/tertBuilding/CMP_bobo/folding/bin/rosi_refold_local.py ~/rosetta/ ~/tertBuilding/CMP_bobo/folding/21169/model_21169.fasta ~/tertBuilding/CMP_bobo/folding/21169/ ~/tertBuilding/CMP_bobo/folding/21169/21169.psipred_ss2
+# python ../../bin/4_refold_local.py ~/rosetta/ r1_fixbb_seq.txt ./ r1_psipred_ss2.txt 
+
 
 # EXAMPLE QSUB
 # qsub ~/tertBuilding/CMP_bobo/folding/bin/rosi_refold_local.py ~/bin/Rosetta/ ~/tertBuilding/CMP_bobo/folding/21169/model_21169.fasta ~/tertBuilding/CMP_bobo/folding/21169/ ~/tertBuilding/CMP_bobo/folding/21169/21169.psipred_ss2
@@ -66,18 +68,18 @@ cmd = [ rosiFOLD,
 '-in:file:frag3', 			frag_3,
 '-in:file:frag9', 			frag_9,
 '-abinitio:relax', 			'True',
-'-abinitio::increase_cycles', '10',
+'-abinitio::increase_cycles', '2000',
 '-abinitio::rg_reweight', 	'0.5',
 '-abinitio::rsd_wt_helix', 	'0.5',
 '-abinitio::rsd_wt_loop', 	'0.5',
 '-use_filters', 		'true', 
-'-nstruct',			'10',
+'-nstruct',			'1',
 '-relax::fast',
 '-out:overwrite', 
-#'-out:file:silent', 		sil_out,
-'-out:path', 'outputs',
-'-out:pdb',                 #    pdb_out,
-#'-psipred_ss2',			ss2F,
+'-out:file:silent', 		sil_out,
+'-out:path', outputs,
+#'-out:pdb',                 #    pdb_out,
+'-psipred_ss2',			ss2F,
 '-constant_seed',
 '-rebuild_disulf', 'true', 
 '-detect_disulf', 'true', 

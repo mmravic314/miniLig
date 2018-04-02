@@ -506,3 +506,783 @@ DD  step 59999 load imb.: force  5.9%
     Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
     1.75076e+05   -8.00278e+05    2.98086e+02   -5.29895e+01    3.08344e-05
 
+DD  step 69999 load imb.: force  1.5%
+
+           Step           Time
+          70000      140.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.31082e+03    9.97062e+03    5.11955e+02   -3.98254e+02    3.29689e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.17931e+04    9.53641e+04   -1.12614e+06    3.27441e+03   -9.74020e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76100e+05   -7.97920e+05    2.99829e+02    2.19870e+01    2.99093e-05
+
+Writing checkpoint, step 75420 at Mon Mar 12 14:53:26 2018
+
+
+DD  step 79999 load imb.: force  1.7%
+
+           Step           Time
+          80000      160.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.39574e+03    1.00060e+04    4.82021e+02   -4.17560e+02    3.37849e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.15271e+04    9.45323e+04   -1.12438e+06    3.26544e+03   -9.73212e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77140e+05   -7.96072e+05    3.01600e+02   -4.17197e+01    3.03194e-05
+
+DD  step 89999 load imb.: force  2.1%
+
+           Step           Time
+          90000      180.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.41248e+03    9.90611e+03    5.24245e+02   -3.93638e+02    3.26685e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.17142e+04    9.42889e+04   -1.12498e+06    3.30363e+03   -9.73957e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76825e+05   -7.97132e+05    3.01064e+02   -1.00964e+02    3.35648e-05
+
+Writing checkpoint, step 92820 at Mon Mar 12 15:08:27 2018
+
+
+Writing checkpoint, step 98160 at Mon Mar 12 15:23:27 2018
+
+
+DD  step 99999 load imb.: force  2.6%
+
+           Step           Time
+         100000      200.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.49525e+03    1.00324e+04    5.28502e+02   -4.94615e+02    3.31210e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18117e+04    9.45331e+04   -1.12520e+06    3.25706e+03   -9.73724e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77210e+05   -7.96514e+05    3.01720e+02   -7.34520e+01    3.08980e-05
+
+Writing checkpoint, step 108600 at Mon Mar 12 15:38:27 2018
+
+
+DD  step 109999 load imb.: force  2.5%
+
+           Step           Time
+         110000      220.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.20513e+03    9.92756e+03    5.46291e+02   -5.37650e+02    3.34758e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21107e+04    9.58141e+04   -1.12648e+06    3.20586e+03   -9.73857e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75663e+05   -7.98194e+05    2.99086e+02    8.91726e+01    2.95804e-05
+
+DD  step 119999 load imb.: force  3.3%
+
+           Step           Time
+         120000      240.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.79378e+03    9.82082e+03    5.64224e+02   -4.16092e+02    3.31655e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.16412e+04    9.53978e+04   -1.12405e+06    3.30512e+03   -9.71629e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76581e+05   -7.95047e+05    3.00649e+02    5.76928e+01    3.07039e-05
+
+Writing checkpoint, step 125180 at Mon Mar 12 15:53:26 2018
+
+
+DD  step 129999 load imb.: force  1.4%
+
+           Step           Time
+         130000      260.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.47453e+03    9.80095e+03    4.91218e+02   -4.40413e+02    3.27803e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18227e+04    9.63304e+04   -1.12810e+06    3.35461e+03   -9.74993e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76099e+05   -7.98894e+05    2.99828e+02    1.45790e+02    3.11679e-05
+
+DD  step 139999 load imb.: force  2.5%
+
+           Step           Time
+         140000      280.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.38193e+03    9.81040e+03    5.10562e+02   -4.15389e+02    3.35896e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18787e+04    9.64175e+04   -1.12804e+06    3.33366e+03   -9.74765e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76515e+05   -7.98249e+05    3.00537e+02    1.12793e+02    3.08512e-05
+
+Writing checkpoint, step 141520 at Mon Mar 12 16:08:27 2018
+
+
+DD  step 149999 load imb.: force  3.7%
+
+           Step           Time
+         150000      300.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.22551e+03    9.89277e+03    5.14165e+02   -5.09079e+02    3.32191e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19629e+04    9.42729e+04   -1.12518e+06    3.24665e+03   -9.74257e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75743e+05   -7.98514e+05    2.99222e+02   -7.23778e+01    3.18775e-05
+
+Writing checkpoint, step 156740 at Mon Mar 12 16:23:27 2018
+
+
+DD  step 159999 load imb.: force  1.7%
+
+           Step           Time
+         160000      320.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.53155e+03    9.93199e+03    5.22783e+02   -5.20048e+02    3.33567e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19422e+04    9.62005e+04   -1.12691e+06    3.29744e+03   -9.73670e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77765e+05   -7.95905e+05    3.02665e+02    8.23104e+01    3.04097e-05
+
+DD  step 169999 load imb.: force  2.1%
+
+           Step           Time
+         170000      340.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.30799e+03    9.92810e+03    5.24901e+02   -5.07453e+02    3.30279e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.20940e+04    9.55630e+04   -1.12648e+06    3.33942e+03   -9.73930e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76168e+05   -7.97762e+05    2.99946e+02   -3.84040e+01    3.20927e-05
+
+Writing checkpoint, step 173080 at Mon Mar 12 16:38:27 2018
+
+
+DD  step 179999 load imb.: force  4.2%
+
+           Step           Time
+         180000      360.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.48418e+03    9.93932e+03    5.43874e+02   -5.09684e+02    3.34876e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.20769e+04    9.59199e+04   -1.12626e+06    3.27395e+03   -9.73185e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76389e+05   -7.96795e+05    3.00322e+02    2.41191e+01    3.21117e-05
+
+Writing checkpoint, step 189620 at Mon Mar 12 16:53:27 2018
+
+
+DD  step 189999 load imb.: force  0.9%
+
+           Step           Time
+         190000      380.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.63676e+03    9.77897e+03    5.09873e+02   -4.89474e+02    3.24414e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18104e+04    9.43525e+04   -1.12531e+06    3.21682e+03   -9.74248e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76811e+05   -7.97437e+05    3.01040e+02   -1.10604e+02    3.16115e-05
+
+DD  step 199999 load imb.: force  2.1%
+
+           Step           Time
+         200000      400.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.36675e+03    9.98964e+03    5.04636e+02   -5.55787e+02    3.32162e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19613e+04    9.53043e+04   -1.12787e+06    3.31560e+03   -9.75658e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76665e+05   -7.98993e+05    3.00791e+02   -3.28645e+01    3.11189e-05
+
+Writing checkpoint, step 206580 at Mon Mar 12 17:08:26 2018
+
+
+DD  step 209999 load imb.: force  2.5%
+
+           Step           Time
+         210000      420.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.18916e+03    9.96468e+03    4.66999e+02   -5.19786e+02    3.35036e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19088e+04    9.59723e+04   -1.12842e+06    3.20272e+03   -9.75888e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76123e+05   -7.99765e+05    2.99868e+02   -5.12842e+01    3.15394e-05
+
+DD  step 219999 load imb.: force  1.9%
+
+           Step           Time
+         220000      440.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.27993e+03    9.90543e+03    5.25409e+02   -4.84597e+02    3.32866e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.22712e+04    9.58347e+04   -1.12742e+06    3.29040e+03   -9.74474e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76055e+05   -7.98419e+05    2.99753e+02    2.48769e+01    3.24763e-05
+
+Writing checkpoint, step 222660 at Mon Mar 12 17:23:26 2018
+
+
+DD  step 229999 load imb.: force  1.6%
+
+           Step           Time
+         230000      460.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.32502e+03    9.99481e+03    5.37634e+02   -4.49508e+02    3.31244e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18742e+04    9.44860e+04   -1.12577e+06    3.33687e+03   -9.74353e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76235e+05   -7.98118e+05    3.00060e+02   -1.27638e+02    3.18263e-05
+
+Writing checkpoint, step 238460 at Mon Mar 12 17:38:27 2018
+
+
+DD  step 239999 load imb.: force  2.7%
+
+           Step           Time
+         240000      480.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.46853e+03    9.93369e+03    4.91027e+02   -5.12267e+02    3.38483e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21117e+04    9.32975e+04   -1.12535e+06    3.27138e+03   -9.74900e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77919e+05   -7.96981e+05    3.02926e+02   -1.12579e+02    3.08496e-05
+
+DD  step 249999 load imb.: force  0.8%
+
+           Step           Time
+         250000      500.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.37841e+03    9.86343e+03    4.88789e+02   -5.17628e+02    3.38932e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18567e+04    9.50266e+04   -1.12707e+06    3.24533e+03   -9.75337e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75428e+05   -7.99908e+05    2.98686e+02   -2.33910e+01    3.02762e-05
+
+Writing checkpoint, step 255940 at Mon Mar 12 17:53:27 2018
+
+
+DD  step 259999 load imb.: force  1.4%
+
+           Step           Time
+         260000      520.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.50251e+03    9.88183e+03    5.87082e+02   -4.85170e+02    3.34876e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18758e+04    9.55789e+04   -1.12625e+06    3.39248e+03   -9.73568e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76255e+05   -7.97313e+05    3.00093e+02    1.28849e+02    3.14230e-05
+
+DD  step 269999 load imb.: force  2.7%
+
+           Step           Time
+         270000      540.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.22335e+03    9.94091e+03    4.81436e+02   -5.03745e+02    3.33751e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21689e+04    9.50782e+04   -1.12654e+06    3.26046e+03   -9.74557e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76119e+05   -7.98438e+05    2.99862e+02    5.34555e+01    3.07977e-05
+
+Writing checkpoint, step 273520 at Mon Mar 12 18:08:27 2018
+
+
+DD  step 279999 load imb.: force  2.3%
+
+           Step           Time
+         280000      560.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.45415e+03    9.90859e+03    5.12628e+02   -4.91531e+02    3.35303e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18774e+04    9.57022e+04   -1.12637e+06    3.17072e+03   -9.73879e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76608e+05   -7.97271e+05    3.00695e+02    8.34855e+01    3.11616e-05
+
+DD  step 289999 load imb.: force  1.8%
+
+           Step           Time
+         290000      580.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.25273e+03    1.00059e+04    5.66119e+02   -5.06549e+02    3.38016e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21215e+04    9.55511e+04   -1.12493e+06    3.10372e+03   -9.72455e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77006e+05   -7.95449e+05    3.01372e+02    9.97950e+01    3.07836e-05
+
+Writing checkpoint, step 291180 at Mon Mar 12 18:23:26 2018
+
+
+DD  step 299999 load imb.: force  2.9%
+
+           Step           Time
+         300000      600.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.53333e+03    9.95053e+03    5.84686e+02   -4.85106e+02    3.35922e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18497e+04    9.47297e+04   -1.12586e+06    3.26434e+03   -9.74076e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77115e+05   -7.96962e+05    3.01557e+02   -4.66792e+01    3.17088e-05
+
+Writing checkpoint, step 308840 at Mon Mar 12 18:38:26 2018
+
+
+DD  step 309999 load imb.: force  2.8%
+
+           Step           Time
+         310000      620.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.55572e+03    9.94823e+03    5.07513e+02   -5.20560e+02    3.34984e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.20050e+04    9.52903e+04   -1.12537e+06    3.38205e+03   -9.72857e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75003e+05   -7.97854e+05    2.97962e+02   -1.92012e+01    3.26862e-05
+
+DD  step 319999 load imb.: force  2.3%
+
+           Step           Time
+         320000      640.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.82817e+03    9.96681e+03    5.34953e+02   -5.15899e+02    3.29562e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.16673e+04    9.65326e+04   -1.12710e+06    3.24239e+03   -9.73543e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77676e+05   -7.95867e+05    3.02513e+02    1.25095e+02    3.25538e-05
+
+Writing checkpoint, step 326580 at Mon Mar 12 18:53:27 2018
+
+
+DD  step 329999 load imb.: force  3.6%
+
+           Step           Time
+         330000      660.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.30694e+03    9.99180e+03    5.46080e+02   -4.96792e+02    3.34764e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18126e+04    9.54661e+04   -1.12599e+06    3.33524e+03   -9.73683e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75356e+05   -7.98326e+05    2.98563e+02    1.09774e+02    2.92754e-05
+
+DD  step 339999 load imb.: force  2.0%
+
+           Step           Time
+         340000      680.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.29707e+03    9.88520e+03    5.70345e+02   -5.57836e+02    3.32635e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.23323e+04    9.53279e+04   -1.12595e+06    3.26774e+03   -9.73501e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76699e+05   -7.96802e+05    3.00849e+02   -7.24982e+01    3.10072e-05
+
+Writing checkpoint, step 344300 at Mon Mar 12 19:08:27 2018
+
+
+DD  step 349999 load imb.: force  2.0%
+
+           Step           Time
+         350000      700.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.11779e+03    9.92477e+03    4.72371e+02   -4.97487e+02    3.31764e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19795e+04    9.59947e+04   -1.12789e+06    3.31956e+03   -9.75263e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75051e+05   -8.00212e+05    2.98043e+02    9.52891e+01    3.18367e-05
+
+DD  step 359999 load imb.: force  1.9%
+
+           Step           Time
+         360000      720.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.41023e+03    9.96194e+03    5.40240e+02   -4.80465e+02    3.29808e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21284e+04    9.61586e+04   -1.12645e+06    3.29113e+03   -9.73142e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75440e+05   -7.97703e+05    2.98705e+02    2.53681e+01    2.98868e-05
+
+Writing checkpoint, step 362020 at Mon Mar 12 19:23:26 2018
+
+
+DD  step 369999 load imb.: force  1.8%
+
+           Step           Time
+         370000      740.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.57555e+03    9.95002e+03    4.94654e+02   -4.48501e+02    3.32557e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19112e+04    9.36476e+04   -1.12341e+06    3.28497e+03   -9.72673e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.77790e+05   -7.94883e+05    3.02706e+02   -3.44883e+01    3.02228e-05
+
+Writing checkpoint, step 379740 at Mon Mar 12 19:38:26 2018
+
+
+DD  step 379999 load imb.: force  1.6%
+
+           Step           Time
+         380000      760.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.57726e+03    1.00761e+04    5.06238e+02   -5.21380e+02    3.36751e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18542e+04    9.44221e+04   -1.12545e+06    3.38855e+03   -9.73783e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76420e+05   -7.97364e+05    3.00374e+02    2.85957e+01    2.95620e-05
+
+Writing checkpoint, step 389600 at Mon Mar 12 20:08:41 2018
+
+
+Writing checkpoint, step 389620 at Mon Mar 12 20:08:43 2018
+
+
+DD  step 389999 load imb.: force  3.4%
+
+           Step           Time
+         390000      780.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.41496e+03    9.88923e+03    4.95686e+02   -4.76621e+02    3.29078e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21649e+04    9.55106e+04   -1.12636e+06    3.22353e+03   -9.73850e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76887e+05   -7.96963e+05    3.01169e+02   -3.07617e+01    3.26100e-05
+
+DD  step 399999 load imb.: force  1.0%
+
+           Step           Time
+         400000      800.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.27696e+03    9.94279e+03    5.02978e+02   -5.40652e+02    3.37023e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.17762e+04    9.48649e+04   -1.12436e+06    3.35792e+03   -9.72813e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76056e+05   -7.96757e+05    2.99754e+02   -1.72243e+01    3.15903e-05
+
+Writing checkpoint, step 402800 at Mon Mar 12 20:23:26 2018
+
+
+DD  step 409999 load imb.: force  4.0%
+
+           Step           Time
+         410000      820.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.23922e+03    9.83131e+03    5.34827e+02   -5.37714e+02    3.31415e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18201e+04    9.53555e+04   -1.12501e+06    3.29435e+03   -9.73160e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76365e+05   -7.96796e+05    3.00280e+02    1.20312e+02    3.13224e-05
+
+Writing checkpoint, step 418580 at Mon Mar 12 20:38:27 2018
+
+
+DD  step 419999 load imb.: force  7.9%
+
+           Step           Time
+         420000      840.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.41623e+03    9.89864e+03    5.03428e+02   -4.31269e+02    3.33750e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21413e+04    9.47843e+04   -1.12666e+06    3.17070e+03   -9.74842e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76750e+05   -7.98092e+05    3.00936e+02    2.31400e+00    3.06466e-05
+
+DD  step 429999 load imb.: force  1.9%
+
+           Step           Time
+         430000      860.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.60133e+03    9.96438e+03    5.20684e+02   -5.15452e+02    3.29836e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19812e+04    9.67374e+04   -1.12776e+06    3.31181e+03   -9.73864e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76535e+05   -7.97330e+05    3.00570e+02    1.94655e+02    3.05286e-05
+
+Writing checkpoint, step 434600 at Mon Mar 12 20:53:27 2018
+
+
+DD  step 439999 load imb.: force  2.9%
+
+           Step           Time
+         440000      880.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.36139e+03    9.80891e+03    5.40911e+02   -5.17684e+02    3.32008e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.20366e+04    9.62325e+04   -1.12733e+06    3.21526e+03   -9.74334e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76615e+05   -7.97719e+05    3.00707e+02    5.21866e+01    3.00032e-05
+
+DD  step 449999 load imb.: force  1.8%
+
+           Step           Time
+         450000      900.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.33855e+03    9.96025e+03    5.77148e+02   -5.55295e+02    3.34528e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.21046e+04    9.38261e+04   -1.12316e+06    3.31177e+03   -9.72251e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76938e+05   -7.95313e+05    3.01256e+02   -7.13602e+01    3.07357e-05
+
+Writing checkpoint, step 451100 at Mon Mar 12 21:08:26 2018
+
+
+DD  step 459999 load imb.: force  1.7%
+
+           Step           Time
+         460000      920.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.41532e+03    1.00912e+04    5.25929e+02   -5.52099e+02    3.33760e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19142e+04    9.69520e+04   -1.12978e+06    3.31425e+03   -9.75783e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76605e+05   -7.99178e+05    3.00689e+02    1.95581e+02    3.02496e-05
+
+Writing checkpoint, step 466580 at Mon Mar 12 21:23:27 2018
+
+
+DD  step 469999 load imb.: force  3.5%
+
+           Step           Time
+         470000      940.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.31219e+03    1.00051e+04    5.23463e+02   -5.27852e+02    3.36603e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.17866e+04    9.38105e+04   -1.12481e+06    3.30883e+03   -9.74230e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76648e+05   -7.97581e+05    3.00763e+02   -9.37805e+01    3.06187e-05
+
+DD  step 479999 load imb.: force  4.1%
+
+           Step           Time
+         480000      960.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.29313e+03    9.84496e+03    5.06832e+02   -4.59037e+02    3.25425e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.18984e+04    9.37878e+04   -1.12424e+06    3.29151e+03   -9.73827e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75786e+05   -7.98041e+05    2.99294e+02   -1.37732e+02    3.13179e-05
+
+Writing checkpoint, step 481940 at Mon Mar 12 21:38:27 2018
+
+
+DD  step 489999 load imb.: force  2.6%
+
+           Step           Time
+         490000      980.00000
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.51735e+03    9.90359e+03    5.48426e+02   -4.77134e+02    3.24046e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.16389e+04    9.53437e+04   -1.12512e+06    3.29995e+03   -9.73101e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75513e+05   -7.97588e+05    2.98830e+02    5.24368e+01    3.21106e-05
+
+Writing checkpoint, step 498700 at Mon Mar 12 21:53:27 2018
+
+
+DD  step 499999 load imb.: force  2.8%
+
+           Step           Time
+         500000     1000.00000
+
+Writing checkpoint, step 500000 at Mon Mar 12 21:54:33 2018
+
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.43813e+03    9.78075e+03    4.84764e+02   -4.67693e+02    3.25468e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.17460e+04    9.59919e+04   -1.12761e+06    3.26225e+03   -9.75116e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.75471e+05   -7.99644e+05    2.98759e+02    8.38305e+01    3.18751e-05
+
+	<======  ###############  ==>
+	<====  A V E R A G E S  ====>
+	<==  ###############  ======>
+
+	Statistics over 500001 steps using 5001 frames
+
+   Energies (kJ/mol)
+            U-B    Proper Dih.  Improper Dih.      CMAP Dih.          LJ-14
+    8.38382e+03    9.93018e+03    5.18385e+02   -4.81409e+02    3.32978e+03
+     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.      Potential
+    3.19454e+04    9.51427e+04   -1.12603e+06    3.28718e+03   -9.73976e+05
+    Kinetic En.   Total Energy    Temperature Pressure (bar)   Constr. rmsd
+    1.76209e+05   -7.97767e+05    3.00016e+02    1.46625e-01    0.00000e+00
+
+          Box-X          Box-Y          Box-Z
+    8.85793e+00    8.85793e+00    8.85793e+00
+
+   Total Virial (kJ/mol)
+    5.88124e+04   -2.17216e+01   -5.23257e+01
+   -2.13809e+01    5.86257e+04    2.72376e+01
+   -5.23793e+01    2.66786e+01    5.87656e+04
+
+   Pressure (bar)
+   -1.67719e+00    1.76299e+00    1.35623e+00
+    1.74666e+00    3.41943e+00   -1.41247e+00
+    1.35873e+00   -1.38576e+00   -1.30237e+00
+
+      T-Protein  T-non-Protein
+    2.99957e+02    3.00019e+02
+
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ NB VdW [V&F]                          3353.506707        3353.507     0.0
+ Pair Search distance check          961360.053998     8652240.486     0.4
+ NxN Ewald Elec. + LJ [F]          26598324.481280  2074669309.540    95.1
+ NxN Ewald Elec. + LJ [V&F]          268724.068784    34665404.873     1.6
+ NxN Ewald Elec. [F]                 174660.616320    10654297.596     0.5
+ NxN Ewald Elec. [V&F]                 1762.482128      148048.499     0.0
+ 1,4 nonbonded interactions            4842.009684      435780.872     0.0
+ Calc Weights                        105924.211848     3813271.627     0.2
+ Spread Q Bspline                   2259716.519424     4519433.039     0.2
+ Gather F Bspline                   2259716.519424    13558299.117     0.6
+ 3D-FFT                             3059599.119186    24476792.953     1.1
+ Solve PME                             1568.003136      100352.201     0.0
+ Reset In Box                          1765.329384        5295.988     0.0
+ CG-CoM                                1765.470616        5296.412     0.0
+ Propers                               4716.009432     1079966.160     0.0
+ Impropers                              304.500609       63336.127     0.0
+ Virial                                3539.870796       63717.674     0.0
+ Stop-CM                                353.150616        3531.506     0.0
+ Calc-Ekin                             7061.741232      190667.013     0.0
+ Lincs                                 2333.900623      140034.037     0.0
+ Lincs-Mat                            50274.140088      201096.560     0.0
+ Constraint-V                         39385.158260      315081.266     0.0
+ Constraint-Vir                        3705.192595       88924.622     0.0
+ Settle                               11572.452338     3737902.105     0.2
+ (null)                                 114.500229           0.000     0.0
+-----------------------------------------------------------------------------
+ Total                                              2181591433.779   100.0
+-----------------------------------------------------------------------------
+
+
+    D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
+
+ av. #atoms communicated per step for force:  2 x 39015.7
+ av. #atoms communicated per step for LINCS:  2 x 3554.6
+
+ Average load imbalance: 2.6 %
+ Part of the total run time spent waiting due to load imbalance: 1.5 %
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 4 MPI ranks
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Domain decomp.         4    1      25000     180.742       2533.148   0.6
+ DD comm. load          4    1       5287       0.380          5.325   0.0
+ DD comm. bounds        4    1        357       0.033          0.464   0.0
+ Neighbor search        4    1      25001     809.809      11349.671   2.6
+ Comm. coord.           4    1     475000     157.080       2201.514   0.5
+ Force                  4    1     500001   24270.325     340154.356  79.1
+ Wait + Comm. F         4    1     500001      63.523        890.288   0.2
+ PME mesh               4    1     500001    4221.539      59165.872  13.8
+ NB X/F buffer ops.     4    1    1450001      76.485       1071.950   0.2
+ Write traj.            4    1         85       0.862         12.083   0.0
+ Update                 4    1     500001     515.346       7222.700   1.7
+ Constraints            4    1     500001     330.157       4627.226   1.1
+ Comm. energies         4    1      50001       6.350         88.999   0.0
+ Rest                                          35.018        490.787   0.1
+-----------------------------------------------------------------------------
+ Total                                      30667.650     429814.384 100.0
+-----------------------------------------------------------------------------
+ Breakdown of PME mesh computation
+-----------------------------------------------------------------------------
+ PME redist. X/F        4    1    1000002    1652.296      23157.318   5.4
+ PME spread/gather      4    1    1000002    2033.575      28501.038   6.6
+ PME 3D-FFT             4    1    1000002     397.402       5569.677   1.3
+ PME 3D-FFT Comm.       4    1    1000002      78.074       1094.226   0.3
+ PME solve Elec         4    1     500001      59.276        830.773   0.2
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:   122670.602    30667.650      400.0
+                         8h31:07
+                 (ns/day)    (hour/ns)
+Performance:        2.817        8.519
+Finished mdrun on rank 0 Mon Mar 12 21:54:33 2018

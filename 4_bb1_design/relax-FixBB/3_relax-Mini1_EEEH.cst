@@ -4,4 +4,4 @@ CoordinateConstraint CA 15 N 2 -9.492  11.072   8.432 HARMONIC 0.0 .4
 CoordinateConstraint CA 21 N 2 -7.998   6.383  13.709 HARMONIC 0.0 .4
 CoordinateConstraint CA 22 N 2 -8.058   5.761   9.963  HARMONIC 0.0 .4
 CoordinateConstraint CA 23 N 2 -8.257   7.530   6.589  HARMONIC 0.0 .4
-CoordinateConstraint CA 25 N 2 -11.668   9.954  -2.825  HARMONIC 0.0 .8
+CoordinateConstraint CA 25 N 2 -11.668   9.954  -2.825  HARMONIC 0.0 .4

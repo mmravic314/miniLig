@@ -30,7 +30,7 @@ cmd = [
 		'-database', rosetta_database_path,
 		'-parser:protocol', design_script_path,
 		'-in:file:s', struc_path,
-		'-nstruct', '2',
+		'-nstruct', '100',
 		'-out:prefix', output_prefix,   
 		'-out:suffix', output_suffix,                               
 		'-out:no_nstruct_label',

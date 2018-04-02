@@ -55,7 +55,7 @@ add_nulls = lambda number, zero_count : "{0:0{1}d}".format(number, zero_count)
 try:
 	output_suffix 			= add_nulls( os.environ["SGE_TASK_ID"], 7 ) 
 except KeyError:
-	output_suffix                      = add_nulls( 1, 5 )
+	output_suffix                      = add_nulls( 1, 7 )
 
 outF 	= modelTag + '%s.pdb' % output_suffix 
 sil_out = os.path.join( outputs, modelTag + '%s.out' % output_suffix )
@@ -74,7 +74,7 @@ cmd = [ rosiFOLD,
 '-abinitio::rsd_wt_helix', 	'0.5',
 '-abinitio::rsd_wt_loop', 	'0.5',
 #'-use_filters', 		'true', 
-'-nstruct',			'1',
+'-nstruct',			'10000',
 '-relax::fast',
 '-out:overwrite', 
 '-out:file:silent', 		sil_out,
@@ -92,7 +92,7 @@ cmd = [ rosiFOLD,
 print  '\n', cmd, '\n'
 # Run design
 
-#sp.call( cmd )
+sp.call( cmd )
 
 
 print 
