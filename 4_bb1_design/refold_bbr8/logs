@@ -1,0 +1,499 @@
+/netapp/home/mmravic/miniLig/4_bb1_design/refold_bbr8
+core.init: Rosetta version 6b19faa778b621691d2c55a4659a05447fe5aa07 2016-01-26 09:11:10 -0600 from git@github.com:RosettaCommons/main.git
+core.init: command: /netapp/home/mmravic/bin/Rosetta/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr8_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/model_0000001.out -out:path outputs/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=844459270 seed_offset=0 real_seed=844459270
+core.init.random: RandomGenerator:init: Normal mode, seed=844459270 RG_type=mt19937
+protocols.abinitio.AbrelaxApplication: read fasta sequence: 46 residues
+MANKIYVECSDDGKCRVMVVTGGADYKLCADESEVDRCIEALVKAS
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+core.chemical.ResidueTypeSet: Finished initializing centroid residue type set.  Created 61 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 0.08 seconds.
+core.io.fragments: reading fragments from file: frag_9 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+core.fragments.ConstantLengthFragSet: finished reading top 25 9mer fragments from file frag_9
+core.io.fragments: reading fragments from file: frag_3 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+core.fragments.ConstantLengthFragSet: finished reading top 200 3mer fragments from file frag_3
+core.fragment: compute strand/loop fractions for 46 residues... 
+protocols.abinitio.AbrelaxApplication: run ClassicAbinitio.....
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+basic.io.database: Database file opened: scoring/score_functions/SecondaryStructurePotential/phi.theta.36.HS.resmooth
+basic.io.database: Database file opened: scoring/score_functions/SecondaryStructurePotential/phi.theta.36.SS.resmooth
+core.scoring: ATOM_VDW set to CENTROID_ROT_MIN
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_pair_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_env_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_cbeta_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_pair_ang_params.txt
+core.scoring.AtomVDW: Openning alternative vdw file: /netapp/home/mmravic/bin/Rosetta/database/chemical/atom_type_sets/centroid_rot//min.txt
+core.scoring: ATOM_VDW set to CENTROID_ROT_MIN
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2013
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+protocols.jobdist.JobDistributors: Looking for an available job: 1 1  1
+protocols.relax.ClassicRelax: Setting up default relax setting
+protocols::checkpoint: Deleting checkpoints of ClassicRelax
+protocols.abinitio: 
+===================================================================
+   Stage 1                                                         
+   Folding with score0 for max of 20000
+protocols.abinitio: Replaced extended chain after 25 cycles.
+protocols.moves.TrialCounter: ClassicFragmentM trials=     25;  accepts= 0.7600;  energy_drop/trial=   0.00000
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          0.100       0.000       0.000
+---------------------------------------------------
+ Total weighted score:                        0.000
+
+===================================================================
+   Stage 2                                                         
+   Folding with score1 for 20000
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.TrialCounter: ClassicFragmentM trials=  20000;  accepts= 0.1437;  energy_drop/trial=  -0.00089
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          1.000       0.000       0.000
+ pair                         1.000      -0.135      -0.135
+ env                          1.000       8.707       8.707
+ hs_pair                      1.000       0.000       0.000
+ ss_pair                      0.300       0.000       0.000
+ sheet                        1.000       0.000       0.000
+---------------------------------------------------
+ Total weighted score:                        8.572
+
+===================================================================
+   Stage 3                                                         
+   Folding with score2 and score5 for 20000
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 4
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 4
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_accept: reset temperature_ = 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 2
+protocols.moves.MonteCarlo: autotemp_reject -- heat: 150 3
+protocols.moves.MonteCarlo: autotemp_accept

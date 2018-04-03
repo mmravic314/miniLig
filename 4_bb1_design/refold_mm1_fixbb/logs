@@ -1,0 +1,274 @@
+/netapp/home/mmravic/miniLig/4_bb1_design/refold_mm1_fixbb
+core.init: Rosetta version 6b19faa778b621691d2c55a4659a05447fe5aa07 2016-01-26 09:11:10 -0600 from git@github.com:RosettaCommons/main.git
+core.init: command: /netapp/home/mmravic/bin/Rosetta/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta mm1_fixbb_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/model_0000001.out -out:path outputs/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=-1345279693 seed_offset=0 real_seed=-1345279693
+core.init.random: RandomGenerator:init: Normal mode, seed=-1345279693 RG_type=mt19937
+protocols.abinitio.AbrelaxApplication: read fasta sequence: 43 residues
+MANTYIKCSDDGSCRVMVSEGGADYKLCSDESELHRCLEALKS
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+core.chemical.ResidueTypeSet: Finished initializing centroid residue type set.  Created 61 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 0.09 seconds.
+core.io.fragments: reading fragments from file: frag_9 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+core.fragments.ConstantLengthFragSet: finished reading top 25 9mer fragments from file frag_9
+core.io.fragments: reading fragments from file: frag_3 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+core.fragments.ConstantLengthFragSet: finished reading top 200 3mer fragments from file frag_3
+core.fragment: compute strand/loop fractions for 43 residues... 
+protocols.abinitio.AbrelaxApplication: run ClassicAbinitio.....
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+basic.io.database: Database file opened: scoring/score_functions/SecondaryStructurePotential/phi.theta.36.HS.resmooth
+basic.io.database: Database file opened: scoring/score_functions/SecondaryStructurePotential/phi.theta.36.SS.resmooth
+core.scoring: ATOM_VDW set to CENTROID_ROT_MIN
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_pair_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_env_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_cbeta_params.txt
+basic.io.database: Database file opened: scoring/score_functions/centroid_smooth/cen_rot_pair_ang_params.txt
+core.scoring.AtomVDW: Openning alternative vdw file: /netapp/home/mmravic/bin/Rosetta/database/chemical/atom_type_sets/centroid_rot//min.txt
+core.scoring: ATOM_VDW set to CENTROID_ROT_MIN
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2013
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+protocols.jobdist.JobDistributors: Looking for an available job: 1 1  1
+protocols.relax.ClassicRelax: Setting up default relax setting
+protocols::checkpoint: Deleting checkpoints of ClassicRelax
+protocols.abinitio: 
+===================================================================
+   Stage 1                                                         
+   Folding with score0 for max of 20000
+protocols.abinitio: Replaced extended chain after 15 cycles.
+protocols.moves.TrialCounter: ClassicFragmentM trials=     15;  accepts= 0.9333;  energy_drop/trial=   0.00044
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          0.100       0.066       0.007
+---------------------------------------------------
+ Total weighted score:                        0.007
+
+===================================================================
+   Stage 2                                                         
+   Folding with score1 for 20000
+protocols.moves.TrialCounter: ClassicFragmentM trials=  20000;  accepts= 0.1921;  energy_drop/trial=  -0.00173
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          1.000       2.105       2.105
+ pair                         1.000      -7.338      -7.338
+ env                          1.000     -10.230     -10.230
+ hs_pair                      1.000      -0.537      -0.537
+ ss_pair                      0.300       0.000       0.000
+ sheet                        1.000       1.232       1.232
+---------------------------------------------------
+ Total weighted score:                      -14.769
+
+===================================================================
+   Stage 3                                                         
+   Folding with score2 and score5 for 20000
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.abinitio:  stop cycles in stage3 due to convergence 
+protocols.moves.TrialCounter: ClassicFragmentM trials=  21418;  accepts= 0.1954;  energy_drop/trial=   0.00122
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          1.000       1.092       1.092
+ cenpack                      0.500       6.976       3.488
+ pair                         1.000      -5.923      -5.923
+ env                          1.000     -12.362     -12.362
+ cbeta                        0.250       9.454       2.363
+ hs_pair                      1.000       0.150       0.150
+ ss_pair                      1.000      -3.488      -3.488
+ sheet                        1.000       1.232       1.232
+---------------------------------------------------
+ Total weighted score:                      -13.448
+
+===================================================================
+   Stage 4                                                         
+   Folding with score3 for 40000
+protocols.moves.TrialCounter: ClassicFragmentM trials=  40000;  accepts= 0.2231;  energy_drop/trial=   0.00015
+protocols.moves.TrialCounter: SmoothFragmentMo trials=  80000;  accepts= 0.3220;  energy_drop/trial=   0.00051
+protocols.abinitio: ------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ vdw                          1.000       3.517       3.517
+ cenpack                      1.000      -9.134      -9.134
+ pair                         1.000     -11.449     -11.449
+ env                          1.000      -3.778      -3.778
+ cbeta                        1.000      10.756      10.756
+ rg                           1.500      10.477      15.715
+ hs_pair                      1.000       1.210       1.210
+ ss_pair                      1.000     -13.374     -13.374
+ rsigma                       1.000      -8.561      -8.561
+ sheet                        1.000       1.232       1.232
+---------------------------------------------------
+ Total weighted score:                      -13.866
+
+===================================================================
+   Finished Abinitio                                                 
+
+core.pose.util: Cannot open psipred_ss2 file psipred-ss2
+protocols.simple_filters.AbinitioBaseFilter: Warning: Needs psipred_ss2 to run filters
+protocols.simple_filters.AbinitioBaseFilter: apply filter: RGFilter
+core.pose.util: Cannot open psipred_ss2 file psipred-ss2
+protocols.simple_filters.AbinitioBaseFilter: Warning: Needs psipred_ss2 to run filters
+protocols.simple_filters.AbinitioBaseFilter: apply filter: Contact-Order Filter
+core.pose.util: Cannot open psipred_ss2 file psipred-ss2
+protocols.simple_filters.AbinitioBaseFilter: Warning: Needs psipred_ss2 to run filters
+protocols.simple_filters.AbinitioBaseFilter: apply filter: SheetFilter
+protocols.abinitio.AbrelaxApplication:  passed all filters 
+core.chemical.ResidueTypeSet: Finished initializing fa_standard residue type set.  Created 384 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 1.01 seconds.
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2013
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/netapp/home/mmravic/bin/Rosetta/database/rotamer/ExtendedOpt1-5/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.32 seconds to load from binary
+core.pack.pack_rotamers: built 638 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 332376 bytes
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2013
+protocols.relax.FastRelax: ================== Using default script ==================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 736 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 16660 bytes
+protocols.relax.FastRelax: CMD: repeat  6087.04  0  0  0.44
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 718 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 378360 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -47.1833  1.34075  1.34075  0.0088
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 670 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 371452 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -40.3069  1.76955  1.76955  0.11
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 653 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 330200 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -36.6023  1.75858  1.75858  0.242
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 654 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 327832 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -37.709  1.95809  1.95809  0.44
+protocols.relax.FastRelax: MRP: 0  -37.709  -37.709  1.95809  1.95809  
+protocols.relax.FastRelax: CMD: accept_to_best  -37.709  1.95809  1.95809  0.44
+protocols.relax.FastRelax: CMD: endrepeat  -37.709  1.95809  1.95809  0.44
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 694 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 356196 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -58.0065  1.96739  1.96739  0.0088
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 683 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 350028 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -50.4316  1.94427  1.94427  0.11
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 675 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 338196 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -45.1347  1.93851  1.93851  0.242
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 671 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 332892 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -39.9684  2.00453  2.00453  0.44
+protocols.relax.FastRelax: MRP: 1  -39.9684  -39.9684  2.00453  2.00453  
+protocols.relax.FastRelax: CMD: accept_to_best  -39.9684  2.00453  2.00453  0.44
+protocols.relax.FastRelax: CMD: endrepeat  -39.9684  2.00453  2.00453  0.44
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 670 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 350900 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -58.3217  2.06774  2.06774  0.0088
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 664 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 344088 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -50.4642  2.01369  2.01369  0.11
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 641 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 322480 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -45.6724  2.00432  2.00432  0.242
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 637 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 319076 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -39.9809  2.00172  2.00172  0.44
+protocols.relax.FastRelax: MRP: 2  -39.9809  -39.9809  2.00172  2.00172  
+protocols.relax.FastRelax: CMD: accept_to_best  -39.9809  2.00172  2.00172  0.44
+protocols.relax.FastRelax: CMD: endrepeat  -39.9809  2.00172  2.00172  0.44
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 670 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 350900 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -58.349  2.06351  2.06351  0.0088
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 665 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 344196 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -50.521  2.01276  2.01276  0.11
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 643 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 324160 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -45.7215  2.00252  2.00252  0.242
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 639 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 320060 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -39.9692  2.00176  2.00176  0.44
+protocols.relax.FastRelax: MRP: 3  -39.9692  -39.9809  2.00172  2.00172  
+protocols.relax.FastRelax: CMD: accept_to_best  -39.9692  2.00176  2.00176  0.44
+protocols.relax.FastRelax: CMD: endrepeat  -39.9692  2.00176  2.00176  0.44
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 670 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 350900 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -58.3174  2.06378  2.06378  0.0088
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 665 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 344196 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -50.4962  2.01045  2.01045  0.11
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 643 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 323464 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -45.7271  2.00159  2.00159  0.242
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 637 rotamers at 43 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 319076 bytes
+protocols.relax.FastRelax: CMD: ramp_repack_min  -39.9718  2.0017  2.0017  0.44
+protocols.relax.FastRelax: MRP: 4  -39.9718  -39.9809  2.00172  2.00172  
+protocols.relax.FastRelax: CMD: accept_to_best  -39.9718  2.0017  2.0017  0.44
+protocols.relax.FastRelax: CMD: endrepeat  -39.9718  2.0017  2.0017  0.44
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols.abinitio.AbrelaxApplication: Finished _0001 in 156 seconds.
+protocols::checkpoint: Deleting checkpoints of ClassicAbinitio
+protocols::checkpoint: Deleting checkpoints of Abrelax
+protocols::checkpoint: Deleting checkpoints of ClassicAbinitio
+protocols::checkpoint: Deleting checkpoints of Abrelax

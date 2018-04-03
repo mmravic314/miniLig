@@ -14,12 +14,26 @@ qsub_header = '''#!/usr/bin/python
 '''
 
 rosiDB 		= os.path.join( sys.argv[2], 'database/' )
-rosiFOLD	= os.path.join( sys.argv[2], 'source/bin/AbinitioRelax.macosclangrelease' )
-#rosiFOLD       = os.path.join( '$ROSETTA/', 'source/bin/AbinitioRelax.linuxgccrelease' ) 
+#rosiFOLD	= os.path.join( sys.argv[2], 'source/bin/AbinitioRelax.macosclangrelease' )
+rosiFOLD       = os.path.join( '$ROSETTA/', 'source/bin/AbinitioRelax.linuxgccrelease' ) 
 #rosiSCORE      = os.path.join( sys.argv[1], 'source/bin/score.macosclangrelease' )
 #rosiSCORE	= os.path.join( sys.argv[1], 'source/bin/score.linuxgccrelease' ) 
 
 for wrkDir in [ x for x in os.listdir( sys.argv[1] ) if 'refold' in x  ]:
+	qsub_header = '''#!/usr/bin/python
+#$ -S /bin/bash
+#$ -l mem_free=1G
+#$ -l arch=linux-x64
+#$ -l netapp=1G
+#$ -l h_rt=00:20:00
+#$ -cwd
+#$ -j y
+#$ -o /netapp/home/mmravic/miniLig/4_bb1_design/%s/logs
+#$ -t 1-75000
+pwd
+''' % wrkDir
+
+
 
 	inFasta   =  '%s_seq.txt' % os.path.basename( wrkDir )[7:] 
 	disulfide = 'disulfide.txt' 
@@ -74,7 +88,7 @@ for wrkDir in [ x for x in os.listdir( sys.argv[1] ) if 'refold' in x  ]:
 '-out:path',                    outputs,
 #'-out:pdb',                    pdb_out,
 #'-psipred_ss2',					ss2F,
-'-psipred_ss2',					'psipred-ss2'
+'-psipred_ss2',					'psipred-ss2',
 '-rebuild_disulf',              'true', 
 '-detect_disulf',               'true', 
 #'-in:fix_disulf',               disulfide, 
@@ -111,7 +125,7 @@ for wrkDir in [ x for x in os.listdir( sys.argv[1] ) if 'refold' in x  ]:
 	print SSrefold_cmd
 #	sp.call( SSrefold_cmd )
 	qsub_cmdTx += ' '.join( SSrefold_cmd ) + '\n'
-
+	qsub_cmdTx +='for i in ./logs/*; do gzip $i; done\n'
 	print qsub_cmdTx
 	qsub_file = open( 'fold_designs.sh', 'w' )
 	qsub_file.write(qsub_cmdTx)
@@ -120,4 +134,4 @@ for wrkDir in [ x for x in os.listdir( sys.argv[1] ) if 'refold' in x  ]:
 
 
 	os.chdir( sys.argv[1] )
-	
+		

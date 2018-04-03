@@ -1,0 +1,52 @@
+/netapp/home/mmravic/miniLig/4_bb1_design/refold_bbr2
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr
+core.init: Rosetta version 6b19faa778b621691d2c55a4659a05447fe5aa07 2016-01-26 09:11:10 -0600 from git@github.com:RosettaCommons/main.git
+core.init: command: /netapp/home/mmravic/bin/Rosetta/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr2_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/model_0000001.out -out:path outputs/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=1304874836 seed_offset=0 real_seed=1304874836
+core.init.random: RandomGenerator:init: Normal mode, seed=1304874836 RG_type=mt19937
+protocols.abinitio.AbrelaxApplication: read fasta sequence: 46 residues
+MANKVYVTCSDDGKCRIMVVTGGADYKLCTDESELDRCIEALVKAS
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+core.chemical.ResidueTypeSet: Finished initializing centroid residue type set.  Created 61 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 0.08 seconds.
+core.io.fragments: reading fragments from file: frag_9 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+. 
+/var/spool/sge/qb3cell/id68/job_scripts/118892: line 12: 35389 Aborted                 (core dumped) $ROSETTA/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr2_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/model_0000001.out -out:path outputs/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr
+core.init: Rosetta version 6b19faa778b621691d2c55a4659a05447fe5aa07 2016-01-26 09:11:10 -0600 from git@github.com:RosettaCommons/main.git
+core.init: command: /netapp/home/mmravic/bin/Rosetta/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr2_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/modelSS_0000001.out -out:path outputs_SS/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true -in:fix_disulf disulfide.txt
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=-853850052 seed_offset=0 real_seed=-853850052
+core.init.random: RandomGenerator:init: Normal mode, seed=-853850052 RG_type=mt19937
+protocols.abinitio.AbrelaxApplication: read fasta sequence: 46 residues
+MANKVYVTCSDDGKCRIMVVTGGADYKLCTDESELDRCIEALVKAS
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+core.chemical.ResidueTypeSet: Finished initializing centroid residue type set.  Created 61 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 0.08 seconds.
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 9 and 15
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 29 and 38
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 9 and 15
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 29 and 38
+core.io.fragments: reading fragments from file: frag_9 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr
+core.init: Rosetta version 6b19faa778b621691d2c55a4659a05447fe5aa07 2016-01-26 09:11:10 -0600 from git@github.com:RosettaCommons/main.git
+core.init: command: /netapp/home/mmravic/bin/Rosetta/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr2_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/modelSS_0000001.out -out:path outputs_SS/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true -in:fix_disulf disulfide.txt
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=1810221037 seed_offset=0 real_seed=1810221037
+core.init.random: RandomGenerator:init: Normal mode, seed=1810221037 RG_type=mt19937
+protocols.abinitio.AbrelaxApplication: read fasta sequence: 46 residues
+MANKVYVTCSDDGKCRIMVVTGGADYKLCTDESELDRCIEALVKAS
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+core.chemical.ResidueTypeSet: Finished initializing centroid residue type set.  Created 61 residue types
+core.chemical.ResidueTypeSet: Total time to initialize 0.08 seconds.
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 9 and 15
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 29 and 38
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 9 and 15
+core.io.raw_data.DisulfideFile: Fixing a disulfide between 29 and 38
+core.io.fragments: reading fragments from file: frag_9 ... 
+core.io.fragments: rosetta++ fileformat detected! Calling legacy reader... 
+/var/spool/sge/qb3cell/id68/job_scripts/118892: line 13: 47666 Aborted                 (core dumped) $ROSETTA/source/bin/AbinitioRelax.linuxgccrelease -database /netapp/home/mmravic/bin/Rosetta/database/ -in:file:fasta bbr2_seq.txt -in:file:frag3 frag_3 -in:file:frag9 frag_9 -abinitio:relax True -abinitio::increase_cycles 10 -abinitio::rg_reweight 0.5 -abinitio::rsd_wt_helix 0.5 -abinitio::rsd_wt_loop 0.5 -use_filters true -nstruct 1 -relax::fast -out:overwrite -out:file:silent outputs/modelSS_0000001.out -out:path outputs_SS/ -psipred_ss2 psipred-ss2 -rebuild_disulf true -detect_disulf true -in:fix_disulf disulfide.txt
+gzip: ./logs/*: Not a directory
