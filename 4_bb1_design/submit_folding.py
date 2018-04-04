@@ -13,25 +13,27 @@ qsub_header = '''#!/usr/bin/python
 #$ -t 1-2
 '''
 
-rosiDB 		= os.path.join( sys.argv[2], 'database/' )
+rosiDB 		= os.path.join( $ROSETTA, 'database/' )
 #rosiFOLD	= os.path.join( sys.argv[2], 'source/bin/AbinitioRelax.macosclangrelease' )
 rosiFOLD       = os.path.join( '$ROSETTA/', 'source/bin/AbinitioRelax.linuxgccrelease' ) 
 #rosiSCORE      = os.path.join( sys.argv[1], 'source/bin/score.macosclangrelease' )
 #rosiSCORE	= os.path.join( sys.argv[1], 'source/bin/score.linuxgccrelease' ) 
 
 for wrkDir in [ x for x in os.listdir( sys.argv[1] ) if 'refold' in x  ]:
-	qsub_header = '''#!/usr/bin/python
+	qsub_header = '''#!/usr/bin/bash
 #$ -S /bin/bash
 #$ -l mem_free=1G
+#$ -e /netapp/home/mmravic/miniLig/4_bb1_design/%s/logs
+#$ -j y
 #$ -l arch=linux-x64
 #$ -l netapp=1G
-#$ -l h_rt=00:20:00
+#$ -l h_rt=00:29:00
 #$ -cwd
 #$ -j y
 #$ -o /netapp/home/mmravic/miniLig/4_bb1_design/%s/logs
-#$ -t 1-75000
+#$ -t 1-2
 pwd
-''' % wrkDir
+''' % (wrkDir, wrkDir)
 
 
 
@@ -125,7 +127,7 @@ pwd
 	print SSrefold_cmd
 #	sp.call( SSrefold_cmd )
 	qsub_cmdTx += ' '.join( SSrefold_cmd ) + '\n'
-	qsub_cmdTx +='for i in ./logs/*; do gzip $i; done\n'
+#	qsub_cmdTx +='for i in ./logs/*; do rm $i; done\n'
 	print qsub_cmdTx
 	qsub_file = open( 'fold_designs.sh', 'w' )
 	qsub_file.write(qsub_cmdTx)
